@@ -1,0 +1,5 @@
+import csv
+csvfile = csv.DictReader( open ('WU.csv'))
+for r in csvfile:
+    if r['Source_Code'] == "Well" and r['Major WU Code'] == 'IN' and r["Year"] == '2014' and float(r['Annual'])/365 >= 1000:
+        print(r['RegNo'],float(r['Annual'])/365)
